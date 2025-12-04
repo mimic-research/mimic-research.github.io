@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="MIMIC: Your Paper Subtitle Here">
+  <meta name="description" content="MIMIC - A brief description of your research contribution and findings.">
+  <meta name="keywords" content="MIMIC, machine learning, deep learning, AI, research">
+  <meta name="author" content="Author 1, Author 2, Author 3">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MIMIC Research">
+  <meta property="og:title" content="MIMIC: Your Paper Subtitle Here">
+  <meta property="og:description" content="MIMIC - A brief description of your research contribution and findings.">
+  <meta property="og:url" content="https://mimic-research.github.io">
+  <meta property="og:image" content="https://mimic-research.github.io/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MIMIC: Your Paper Subtitle Here">
+  <meta name="twitter:description" content="MIMIC - A brief description of your research contribution and findings.">
+  <meta name="twitter:image" content="https://mimic-research.github.io/static/images/social_preview.png">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="MIMIC: Your Paper Title">
+  <meta name="citation_author" content="Last, First">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="Conference Name 2025">
+
+  <meta name="theme-color" content="#0366d6">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>MIMIC | Research Project Page</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Custom styles for Ask a Question form and GIF gallery -->
+  <style>
+    /* GIF Gallery Styles */
+    .gif-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .gif-item {
+      background: var(--background-primary);
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border: 1px solid var(--border-color);
+    }
+
+    .gif-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gif-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gif-caption {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* Ask a Question Form Styles */
+    .question-form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--background-primary);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .question-form .field {
+      margin-bottom: 1.5rem;
+    }
+
+    .question-form label {
+      display: block;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .question-form input[type="email"],
+    .question-form textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: var(--transition);
+      background: var(--background-accent);
+    }
+
+    .question-form input[type="email"]:focus,
+    .question-form textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      background: var(--background-primary);
+    }
+
+    .question-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .question-form button[type="submit"] {
+      width: 100%;
+      padding: 1rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .question-form button[type="submit"]:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 1rem;
+    }
+
+    /* Key Figure Styles */
+    .key-figure {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .key-figure img {
+      width: 100%;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .key-figure-caption {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- Header Section -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- Project Title -->
+            <h1 class="title is-1 publication-title">MIMIC: Your Paper Subtitle Here</h1>
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://author1-website.com" target="_blank">Author One</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://author2-website.com" target="_blank">Author Two</a><sup>2*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://author3-website.com" target="_blank">Author Three</a><sup>1</sup>
+              </span>
+            </div>
+
+            <!-- Affiliations -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>Institution One &nbsp;&nbsp;
+                <sup>2</sup>Institution Two
+              </span>
+              <br>
+              <span class="author-block" style="font-weight: 600; color: var(--primary-color);">
+                Conference Name 2025
+              </span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+            </div>
+
+            <!-- Links -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper PDF -->
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Code -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR_REPO" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- arXiv -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Figure Section -->
+  <section class="hero">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="key-figure">
+          <!-- Replace with your key figure -->
+          <img src="static/images/carousel1.jpg" alt="MIMIC Key Figure - Overview of our approach" loading="lazy"/>
+          <p class="key-figure-caption">
+            <strong>Figure:</strong> Overview of MIMIC. Replace this caption with a brief description of your key figure or teaser image.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
+              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate
+              nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante,
+              nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus.
+            </p>
+            <p>
+              Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              Replace this placeholder text with your actual abstract. Describe the problem you're solving,
+              your approach, and key results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="content has-text-justified">
+          <p style="text-align: center; margin-bottom: 2rem;">
+            Describe your methodology here. Explain the key components of your approach and how they work together.
+          </p>
+        </div>
+        <!-- Method Figure/Diagram -->
+        <div class="key-figure">
+          <img src="static/images/carousel2.jpg" alt="MIMIC Method Overview" loading="lazy"/>
+          <p class="key-figure-caption">
+            <strong>Method Overview:</strong> Replace with a description of your method diagram.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div class="content has-text-justified">
+        <p style="text-align: center; margin-bottom: 2rem;">
+          Present your quantitative results here. You can include tables, charts, or comparison figures.
+        </p>
+      </div>
+      <!-- Results Carousel -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/carousel3.jpg" alt="Result 1" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Result 1: Description of this result or comparison.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/carousel4.jpg" alt="Result 2" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Result 2: Description of this result or comparison.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/carousel1.jpg" alt="Result 3" loading="lazy"/>
+          <h2 class="subtitle has-text-centered">
+            Result 3: Description of this result or comparison.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualitative Results / GIF Gallery Section -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <p style="text-align: center; margin-bottom: 2rem;">
+            Visual demonstrations of our method. Replace the placeholder images with your GIFs.
+          </p>
+        </div>
+
+        <div class="gif-gallery">
+          <!-- GIF Item 1 -->
+          <div class="gif-item">
+            <img src="static/images/carousel1.jpg" alt="Qualitative result 1" loading="lazy"/>
+            <p class="gif-caption">Example 1: Description of this qualitative result</p>
+          </div>
+
+          <!-- GIF Item 2 -->
+          <div class="gif-item">
+            <img src="static/images/carousel2.jpg" alt="Qualitative result 2" loading="lazy"/>
+            <p class="gif-caption">Example 2: Description of this qualitative result</p>
+          </div>
+
+          <!-- GIF Item 3 -->
+          <div class="gif-item">
+            <img src="static/images/carousel3.jpg" alt="Qualitative result 3" loading="lazy"/>
+            <p class="gif-caption">Example 3: Description of this qualitative result</p>
+          </div>
+
+          <!-- GIF Item 4 -->
+          <div class="gif-item">
+            <img src="static/images/carousel4.jpg" alt="Qualitative result 4" loading="lazy"/>
+            <p class="gif-caption">Example 4: Description of this qualitative result</p>
+          </div>
+
+          <!-- GIF Item 5 -->
+          <div class="gif-item">
+            <img src="static/images/carousel1.jpg" alt="Qualitative result 5" loading="lazy"/>
+            <p class="gif-caption">Example 5: Description of this qualitative result</p>
+          </div>
+
+          <!-- GIF Item 6 -->
+          <div class="gif-item">
+            <img src="static/images/carousel2.jpg" alt="Qualitative result 6" loading="lazy"/>
+            <p class="gif-caption">Example 6: Description of this qualitative result</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask a Question Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ask a Question</h2>
+      <div class="content has-text-centered">
+        <p style="margin-bottom: 2rem; color: var(--text-secondary);">
+          Have a question about our work? We'd love to hear from you!
+        </p>
+      </div>
+
+      <div class="question-form-container">
+        <!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
+        <form class="question-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="question">Your Question</label>
+            <textarea id="question" name="question" placeholder="What would you like to know about our research?" required></textarea>
+          </div>
+
+          <!-- Hidden field to identify the source -->
+          <input type="hidden" name="_subject" value="MIMIC Project - New Question">
+
+          <button type="submit">
+            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+            Send Question
+          </button>
+        </form>
+        <p class="form-note">
+          We'll respond to your email as soon as possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX Section -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{mimic2025,
+  title={MIMIC: Your Paper Title Here},
+  author={Author One and Author Two and Author Three},
+  journal={Conference Name},
+  year={2025},
+  url={https://mimic-research.github.io}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              <br>
+              Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+</body>
+</html>
