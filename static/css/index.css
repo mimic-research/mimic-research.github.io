@@ -1,9 +1,9 @@
 /* Modern CSS Variables for consistent theming - Colors from rtrivedi.me */
 :root {
-  --primary-color: #0366d6;
-  --primary-hover: #0256b9;
+  --primary-color: #962c37;
+  --primary-hover: #b71c1c;
   --secondary-color: #586069;
-  --accent-color: #0366d6;
+  --accent-color: #962c37;
   --text-primary: #24292e;
   --text-secondary: #586069;
   --text-light: #6a737d;
@@ -15,8 +15,8 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --gradient-primary: linear-gradient(135deg, #0366d6 0%, #0256b9 100%);
-  --gradient-accent: linear-gradient(135deg, #0366d6 0%, #28a745 100%);
+  --gradient-primary: linear-gradient(135deg, #962c37 0%, #b71c1c 100%);
+  --gradient-accent: linear-gradient(135deg, #962c37 0%, #b71c1c 100%);
   --gradient-subtle: linear-gradient(135deg, #f6f8fa 0%, #e1e4e8 100%);
   --border-radius: 12px;
   --border-radius-lg: 16px;
@@ -25,8 +25,8 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-  --primary-color: #58a6ff;
-  --primary-hover: #79b8ff;
+  --primary-color: #e57373;
+  --primary-hover: #ef9a9a;
   --text-primary: #e6edf3;
   --text-secondary: #8b949e;
   --text-light: #6e7681;
