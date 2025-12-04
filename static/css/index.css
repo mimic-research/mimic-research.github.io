@@ -23,6 +23,126 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --primary-color: #58a6ff;
+  --primary-hover: #79b8ff;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-light: #6e7681;
+  --background-primary: #0d1117;
+  --background-secondary: #161b22;
+  --background-accent: #21262d;
+  --border-color: #30363d;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+}
+
+/* Dark mode overrides for Bulma */
+[data-theme="dark"] .hero.is-light {
+  background: var(--background-secondary) !important;
+}
+
+[data-theme="dark"] .section {
+  background: var(--background-primary);
+}
+
+[data-theme="dark"] .title,
+[data-theme="dark"] .subtitle {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .content p,
+[data-theme="dark"] .content {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background: var(--background-accent) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .footer {
+  background: var(--background-secondary) !important;
+}
+
+[data-theme="dark"] .hero {
+  background: var(--background-primary);
+}
+
+[data-theme="dark"] .gif-item,
+[data-theme="dark"] .question-form-container,
+[data-theme="dark"] .results-carousel .item {
+  background: var(--background-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .question-form input,
+[data-theme="dark"] .question-form textarea {
+  background: var(--background-accent) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .spotlight-badge {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: #fef3c7;
+}
+
+/* Global link colors - override Bulma */
+a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--background-secondary);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+  z-index: 1001;
+  box-shadow: var(--shadow-md);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.dark-mode-toggle .fa-sun {
+  display: none;
+}
+
+[data-theme="dark"] .dark-mode-toggle .fa-moon {
+  display: none;
+}
+
+[data-theme="dark"] .dark-mode-toggle .fa-sun {
+  display: block;
+}
+
 /* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;

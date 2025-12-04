@@ -45,7 +45,7 @@
   <title>MIMIC | Inner Speech as Behavior Guides - NeurIPS 2025</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -261,10 +261,37 @@
 </head>
 <body>
 
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
+
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
+
+  <script>
+    // Dark mode toggle with localStorage persistence
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Check for saved theme preference or default to light
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 
   <main id="main-content">
 
@@ -283,7 +310,7 @@
                 <a href="https://rtrivedi.me" target="_blank">Rakshit S. Trivedi</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://ksharma.me" target="_blank">Kartik Sharma</a><sup>2</sup>,
+                <a href="https://ksartik.github.io/" target="_blank">Kartik Sharma</a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a href="https://parkes.seas.harvard.edu" target="_blank">David C. Parkes</a><sup>3</sup>
