@@ -200,6 +200,41 @@
       line-height: 1.6;
     }
 
+    /* Side by side figures */
+    .side-by-side-figures {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .side-by-side-figures .figure-item {
+      flex: 1;
+      min-width: 280px;
+      max-width: 48%;
+      text-align: center;
+    }
+
+    .side-by-side-figures .figure-item img {
+      width: 100%;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .side-by-side-figures .sub-caption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    @media screen and (max-width: 768px) {
+      .side-by-side-figures .figure-item {
+        max-width: 100%;
+      }
+    }
+
     /* Spotlight Badge */
     .spotlight-badge {
       display: inline-block;
@@ -221,11 +256,29 @@
 
     /* Institution Logos */
     .institution-logo {
-      height: 1.4em;
+      height: 1.8em;
       width: auto;
       vertical-align: middle;
-      margin: 0 8px 0 0;
+      margin: 0 10px 0 0;
       opacity: 0.9;
+    }
+
+    /* Affiliations list styling */
+    .affiliations-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .affiliation-item {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .affiliation-separator {
+      margin: 0 0.75rem;
     }
 
     /* Disabled/Greyed Button */
@@ -301,12 +354,12 @@
             </div>
 
             <!-- Affiliations -->
-            <div class="is-size-5 publication-authors" style="margin-bottom: 0.5rem;">
-              <span><img src="static/images/mit-logo.png" alt="MIT" class="institution-logo">MIT<sup>1</sup></span>
-              <span style="margin: 0 0.75rem;">·</span>
-              <span><img src="static/images/gatech-logo.png" alt="Georgia Tech" class="institution-logo">Georgia Tech<sup>2</sup></span>
-              <span style="margin: 0 0.75rem;">·</span>
-              <span><img src="static/images/harvard-logo.png" alt="Harvard" class="institution-logo">Harvard University<sup>3</sup></span>
+            <div class="is-size-5 publication-authors affiliations-list" style="margin-bottom: 0.5rem;">
+              <span class="affiliation-item"><img src="static/images/mit-logo.png" alt="MIT" class="institution-logo">Massachusetts Institute of Technology<sup>1</sup></span>
+              <span class="affiliation-separator">·</span>
+              <span class="affiliation-item"><img src="static/images/gatech-logo.png" alt="Georgia Tech" class="institution-logo">Georgia Institute of Technology<sup>2</sup></span>
+              <span class="affiliation-separator">·</span>
+              <span class="affiliation-item"><img src="static/images/harvard-logo.png" alt="Harvard" class="institution-logo">Harvard University<sup>3</sup></span>
             </div>
 
             <!-- Corresponding Author -->
@@ -359,10 +412,19 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div class="key-figure">
-          <!-- Replace with your key figure -->
-          <img src="static/images/carousel1.jpg" alt="MIMIC Key Figure - Overview of our approach" loading="lazy"/>
+          <!-- Side by side figures -->
+          <div class="side-by-side-figures">
+            <div class="figure-item">
+              <img src="static/images/fig-1a.png" alt="Behaviorist framework" loading="lazy"/>
+              <p class="sub-caption">(a) Behaviorist framework: Direct stimulus-response mapping</p>
+            </div>
+            <div class="figure-item">
+              <img src="static/images/fig-1b.png" alt="Cognitive framework" loading="lazy"/>
+              <p class="sub-caption">(b) Cognitive framework: Linguistically-mediated action selection</p>
+            </div>
+          </div>
           <p class="key-figure-caption">
-            <strong>Figure:</strong> Overview of MIMIC. Replace this caption with a brief description of your key figure or teaser image.
+            <strong>Figure:</strong> Contrasting theoretical frameworks for IL. (a) The behaviorist approach models human behavior as a direct mapping from environmental states to actions (s<sub>t</sub> ↦ a<sub>t</sub>), treating cognitive processes as opaque transformations. (b) The cognitive approach instantiated by MIMIC introduces inner speech as a mediational layer (s<sub>t</sub> → m<sub>t</sub> → a<sub>t</sub>), where m<sub>t</sub> represents linguistically-structured internal deliberation that enables behavioral diversity and contextual adaptation.
           </p>
         </div>
       </div>
