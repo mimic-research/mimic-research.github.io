@@ -492,9 +492,16 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Results</h2>
-      <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; padding: 3rem 0;">
-        <i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Coming Soon
-      </p>
+
+      <!-- Ablation Results -->
+      <h4 class="title is-5 has-text-centered" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">Ablation Studies</h4>
+      <div class="key-figure">
+        <img src="static/images/ablation.png" alt="Ablation Studies" loading="lazy"/>
+        <p class="key-figure-caption">
+          <strong>Ablation Studies:</strong> Analysis of key components in the MIMIC framework.
+        </p>
+      </div>
+
       <!-- COMMENTED OUT - Results content
       <div class="content has-text-justified">
         <p style="text-align: center; margin-bottom: 2rem;">
@@ -530,48 +537,44 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Generation and Steering Examples</h2>
-        <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; padding: 3rem 0;">
-          <i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Coming Soon
-        </p>
-        <!-- COMMENTED OUT - GIF Gallery content
-        <div class="content has-text-justified">
-          <p style="text-align: center; margin-bottom: 2rem;">
-            Visual demonstrations of our method. Replace the placeholder images with your GIFs.
-          </p>
-        </div>
 
-        <div class="gif-gallery">
+        <!-- Row 1: Overcooked examples (square brackets + carefully) -->
+        <h4 class="title is-5 has-text-centered" style="margin-top: 2rem; margin-bottom: 1rem;">Overcooked</h4>
+        <div class="gif-gallery" style="grid-template-columns: repeat(3, 1fr);">
           <div class="gif-item">
-            <img src="static/images/carousel1.jpg" alt="Qualitative result 1" loading="lazy"/>
-            <p class="gif-caption">Example 1: Description of this qualitative result</p>
+            <img src="static/gifs/['Here, I balance onion placement and soup retrieval to maintain workflow.', 'GIF 7_ The agent exhibits strategic placement of onions in the pot while communicating with the other agent to reduce overlap in actions.'].gif" alt="Overcooked example 1" loading="lazy"/>
+            <p class="gif-caption">Here, I balance onion placement and soup retrieval to maintain workflow. The agent exhibits strategic placement of onions in the pot while communicating with the other agent to reduce overlap in actions.</p>
           </div>
 
           <div class="gif-item">
-            <img src="static/images/carousel2.jpg" alt="Qualitative result 2" loading="lazy"/>
-            <p class="gif-caption">Example 2: Description of this qualitative result</p>
+            <img src="static/gifs/['In GIF 3, the agent adapts its movement to minimize collisions in the cramped space.', 'In the fourth GIF, the agent coordinates movements to minimize delays and optimize task completion.'].gif" alt="Overcooked example 2" loading="lazy"/>
+            <p class="gif-caption">The agent adapts its movement to minimize collisions in the cramped space. The agent coordinates movements to minimize delays and optimize task completion.</p>
           </div>
 
           <div class="gif-item">
-            <img src="static/images/carousel3.jpg" alt="Qualitative result 3" loading="lazy"/>
-            <p class="gif-caption">Example 3: Description of this qualitative result</p>
-          </div>
-
-          <div class="gif-item">
-            <img src="static/images/carousel4.jpg" alt="Qualitative result 4" loading="lazy"/>
-            <p class="gif-caption">Example 4: Description of this qualitative result</p>
-          </div>
-
-          <div class="gif-item">
-            <img src="static/images/carousel1.jpg" alt="Qualitative result 5" loading="lazy"/>
-            <p class="gif-caption">Example 5: Description of this qualitative result</p>
-          </div>
-
-          <div class="gif-item">
-            <img src="static/images/carousel2.jpg" alt="Qualitative result 6" loading="lazy"/>
-            <p class="gif-caption">Example 6: Description of this qualitative result</p>
+            <img src="static/gifs/Carefully navigate around the green-hatted agent to avoid collisions..gif" alt="Overcooked example 3" loading="lazy"/>
+            <p class="gif-caption">Carefully navigate around the green-hatted agent to avoid collisions.</p>
           </div>
         </div>
-        -->
+
+        <!-- Row 2: Block stacking examples (rest) -->
+        <h4 class="title is-5 has-text-centered" style="margin-top: 2.5rem; margin-bottom: 1rem;">Block Stacking</h4>
+        <div class="gif-gallery" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="gif-item">
+            <img src="static/gifs/Use a zigzag pattern to correct initial misalignment..gif" alt="Block stacking example 1" loading="lazy"/>
+            <p class="gif-caption">Use a zigzag pattern to correct initial misalignment.</p>
+          </div>
+
+          <div class="gif-item">
+            <img src="static/gifs/Adopt a systematic approach, sorting one color completely before switching..gif" alt="Block stacking example 2" loading="lazy"/>
+            <p class="gif-caption">Adopt a systematic approach, sorting one color completely before switching.</p>
+          </div>
+
+          <div class="gif-item">
+            <img src="static/gifs/I focus on speed over precision, rapidly stacking blocks..gif" alt="Block stacking example 3" loading="lazy"/>
+            <p class="gif-caption">I focus on speed over precision, rapidly stacking blocks.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
