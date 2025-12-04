@@ -234,12 +234,13 @@ body {
 
 
 /* Publication Content Styling */
-.publication-title {
+.publication-title,
+h1.title.is-1.publication-title {
     font-family: 'Inter', sans-serif !important;
     font-weight: 800 !important;
     font-size: 2.25rem !important;
     color: var(--text-primary) !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
     line-height: 1.2 !important;
 }
 
