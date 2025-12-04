@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="MIMIC: Your Paper Subtitle Here">
-  <meta name="description" content="MIMIC - A brief description of your research contribution and findings.">
-  <meta name="keywords" content="MIMIC, machine learning, deep learning, AI, research">
-  <meta name="author" content="Author 1, Author 2, Author 3">
+  <meta name="title" content="MIMIC: Inner Speech as Behavior Guides">
+  <meta name="description" content="MIMIC - Steerable Imitation of Diverse Behaviors for Human-AI coordination using inner speech as behavioral intent.">
+  <meta name="keywords" content="MIMIC, imitation learning, human-AI coordination, inner speech, behavior cloning, NeurIPS 2025">
+  <meta name="author" content="Rakshit S. Trivedi, Kartik Sharma, David C. Parkes">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="MIMIC Research">
-  <meta property="og:title" content="MIMIC: Your Paper Subtitle Here">
-  <meta property="og:description" content="MIMIC - A brief description of your research contribution and findings.">
+  <meta property="og:title" content="MIMIC: Inner Speech as Behavior Guides">
+  <meta property="og:description" content="Steerable Imitation of Diverse Behaviors for Human-AI coordination. Spotlight at NeurIPS 2025.">
   <meta property="og:url" content="https://mimic-research.github.io">
   <meta property="og:image" content="https://mimic-research.github.io/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
@@ -24,15 +24,17 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MIMIC: Your Paper Subtitle Here">
-  <meta name="twitter:description" content="MIMIC - A brief description of your research contribution and findings.">
+  <meta name="twitter:title" content="MIMIC: Inner Speech as Behavior Guides">
+  <meta name="twitter:description" content="Steerable Imitation of Diverse Behaviors for Human-AI coordination. Spotlight at NeurIPS 2025.">
   <meta name="twitter:image" content="https://mimic-research.github.io/static/images/social_preview.png">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="MIMIC: Your Paper Title">
-  <meta name="citation_author" content="Last, First">
+  <meta name="citation_title" content="Inner Speech as Behavior Guides: Steerable Imitation of Diverse Behaviors for Human-AI coordination">
+  <meta name="citation_author" content="Trivedi, Rakshit S.">
+  <meta name="citation_author" content="Sharma, Kartik">
+  <meta name="citation_author" content="Parkes, David C.">
   <meta name="citation_publication_date" content="2025">
-  <meta name="citation_conference_title" content="Conference Name 2025">
+  <meta name="citation_conference_title" content="NeurIPS 2025">
 
   <meta name="theme-color" content="#0366d6">
 
@@ -40,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <title>MIMIC | Research Project Page</title>
+  <title>MIMIC | Inner Speech as Behavior Guides - NeurIPS 2025</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -197,6 +199,64 @@
       font-size: 1.05rem;
       line-height: 1.6;
     }
+
+    /* Spotlight Badge */
+    .spotlight-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #1f2937;
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4); }
+      50% { box-shadow: 0 4px 20px rgba(245, 158, 11, 0.6); }
+    }
+
+    /* Institution Logos */
+    .institution-logo {
+      height: 24px;
+      width: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+      opacity: 0.9;
+    }
+
+    .affiliations-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+    }
+
+    .affiliation-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    /* Disabled/Greyed Button */
+    .button.is-disabled {
+      background: #9ca3af !important;
+      cursor: not-allowed !important;
+      opacity: 0.7;
+    }
+
+    .button.is-disabled:hover {
+      transform: none !important;
+      box-shadow: var(--shadow-md) !important;
+      background: #9ca3af !important;
+    }
   </style>
 </head>
 <body>
@@ -215,40 +275,52 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- Project Title -->
-            <h1 class="title is-1 publication-title">MIMIC: Your Paper Subtitle Here</h1>
+            <h1 class="title is-1 publication-title">Inner Speech as Behavior Guides:<br>Steerable Imitation of Diverse Behaviors for Human-AI Coordination</h1>
 
             <!-- Authors -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://author1-website.com" target="_blank">Author One</a><sup>1*</sup>,
+                <a href="https://rtrivedi.me" target="_blank">Rakshit S. Trivedi</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://author2-website.com" target="_blank">Author Two</a><sup>2*</sup>,
+                <a href="https://ksharma.me" target="_blank">Kartik Sharma</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://author3-website.com" target="_blank">Author Three</a><sup>1</sup>
+                <a href="https://parkes.seas.harvard.edu" target="_blank">David C. Parkes</a><sup>3</sup>
               </span>
             </div>
 
-            <!-- Affiliations -->
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <sup>1</sup>Institution One &nbsp;&nbsp;
-                <sup>2</sup>Institution Two
-              </span>
-              <br>
-              <span class="author-block" style="font-weight: 600; color: var(--primary-color);">
-                Conference Name 2025
-              </span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+            <!-- Affiliations with Logos -->
+            <div class="affiliations-row">
+              <div class="affiliation-item">
+                <sup>1</sup>
+                <img src="static/images/mit-logo.png" alt="MIT" class="institution-logo">
+                MIT
+              </div>
+              <div class="affiliation-item">
+                <sup>2</sup>
+                <img src="static/images/gatech-logo.png" alt="Georgia Tech" class="institution-logo">
+                Georgia Tech
+              </div>
+              <div class="affiliation-item">
+                <sup>3</sup>
+                <img src="static/images/harvard-logo.png" alt="Harvard" class="institution-logo">
+                Harvard University
+              </div>
+            </div>
+
+            <!-- Spotlight Badge -->
+            <div class="spotlight-badge">
+              <i class="fas fa-star" style="margin-right: 0.5rem;"></i>
+              Spotlight Paper at NeurIPS 2025
             </div>
 
             <!-- Links -->
-            <div class="column has-text-centered">
+            <div class="column has-text-centered" style="margin-top: 1.5rem;">
               <div class="publication-links">
                 <!-- Paper PDF -->
                 <span class="link-block">
-                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://openreview.net/pdf?id=AwLRF1lZvI" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
                   </a>
@@ -256,15 +328,15 @@
 
                 <!-- Code -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR_REPO" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/rstrivedi/mimic-inner-speech" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
 
-                <!-- arXiv -->
+                <!-- arXiv (greyed out) -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a class="external-link button is-normal is-rounded is-dark is-disabled" title="Coming soon">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                     <span>arXiv</span>
                   </a>
@@ -300,15 +372,10 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
-              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate
-              nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante,
-              nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus.
+              Effective human-AI coordination requires artificial agents capable of exhibiting and responding to human-like behaviors while adapting to changing contexts. Imitation learning has emerged as one of the prominent approaches to build such agents by training them to mimic human-demonstrated behaviors. However, current methods struggle to capture the inherent diversity and non-Markovian nature of human behavior and lack the ability to steer behavior at inference time. Drawing inspiration from the theory of human cognitive processes, where inner speech guides action selection before execution, we propose <strong>MIMIC</strong> (Modeling Inner Motivations for Imitation and Control), a framework that uses language as an internal representation of behavioral intent.
             </p>
             <p>
-              Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-              Replace this placeholder text with your actual abstract. Describe the problem you're solving,
-              your approach, and key results.
+              MIMIC employs the novel use of vision-language models as linguistic scaffolding to train a conditional variational autoencoder capable of generating inner speech from observations. A diffusion-based behavior cloning policy then selects actions conditioned on current observations and the generated inner speech. MIMIC enables fine-grained steering of behavior at inference time by conditioning the agent on behavior-specific speech. Experiments across robotic manipulation tasks and human-AI collaboration games demonstrate that MIMIC significantly enhances both behavior diversity and fidelity to human demonstrations while enabling nuanced behavioral steering without training on additional demonstrations.
             </p>
           </div>
         </div>
@@ -470,12 +537,13 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{mimic2025,
-  title={MIMIC: Your Paper Title Here},
-  author={Author One and Author Two and Author Three},
-  journal={Conference Name},
-  year={2025},
-  url={https://mimic-research.github.io}
+      <pre id="bibtex-code"><code>@inproceedings{
+trivedi2025inner,
+title={Inner Speech as Behavior Guides: Steerable Imitation of Diverse Behaviors for Human-{AI} coordination},
+author={Rakshit Trivedi and Kartik Sharma and David C. Parkes},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year={2025},
+url={https://openreview.net/forum?id=AwLRF1lZvI}
 }</code></pre>
     </div>
   </section>
